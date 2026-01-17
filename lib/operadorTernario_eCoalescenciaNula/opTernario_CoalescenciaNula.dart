@@ -37,6 +37,15 @@ String controleAcesso(final String? nome, final bool ativo) {
 void main() {
   print(maiorIdade(28));
   print(notaMedia(6));
-  print(login("Marco Aurélio"));
+  print(login(null));
+  print(controleAcesso(null, true));
   print(controleAcesso("Marco", true));
+  print(controleAcesso("Marco Aurélio", false));
+  print(controleAcesso(null, false));
+
+  String? nome;
+  final bool vip = false;
+
+  String resultado = vip ? "VIP ${nome ?? "Cliente"}" : "Cliente comum";
+  // Exercicio 5 = Retorna "Cliente Comum"
 }

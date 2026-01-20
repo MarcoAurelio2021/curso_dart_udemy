@@ -8,7 +8,7 @@ Valores padrão evitam null.
 
 // Valor padrão em posicionais
 
-void repetir(String texto, [int vezes = 1]) {
+void repetir(final String texto, [final int vezes = 1]) {
   for (int i = 0; i < vezes; i++) {
     print(texto);
   }

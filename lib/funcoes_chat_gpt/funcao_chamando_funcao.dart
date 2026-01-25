@@ -1,3 +1,9 @@
+/*
+
+  Chamada de função de Nivel Superior
+
+ */
+
 int multiplicar(final int x, final int y) {
   return x * y;
 }

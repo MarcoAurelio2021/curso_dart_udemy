@@ -44,9 +44,9 @@ void main() {
   print(controleAcesso(null, false));
 
   String? nome;
-  final bool vip = true;
+  late final bool vip = true;
 
-  final String resultado = vip ? "VIP ${nome ?? "Cliente"}" : "Cliente comum";
+  final String resultado = vip ? (nome ?? "Cliente") : "Cliente Comum";
 
   print(resultado);
   // Exercicio 5 = Retorna "Cliente Comum"

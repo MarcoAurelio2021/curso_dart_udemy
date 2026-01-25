@@ -1,9 +1,9 @@
 void main() {
-  String nome = "Marco Aurélio";
-  int idade = 28;
-  double peso = 88.0;
+  final String nome = "Marco Aurélio";
+  final int idade = 28;
+  final double peso = 88.0;
 
-  String informcoesCompletas =
+  final String informcoesCompletas =
       ''' 
     Nome: $nome
     dade; $idade

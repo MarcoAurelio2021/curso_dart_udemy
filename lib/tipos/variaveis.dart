@@ -1,7 +1,7 @@
 void main() {
-  var idade = "28";
-  var peso = 88.00;
-  var maiorIdade = true;
+  final idade = "28";
+  final peso = 88.00;
+  final maiorIdade = true;
 
   print(idade);
   print(peso);
@@ -18,9 +18,7 @@ void main() {
 
   String? email;
   email = "marcoaurelio_avila@outlook.com";
-  if (email != null) {
-    print(email.length);
-  }
+  print(email.length);
 
   email = "mfvwfv";
 
@@ -29,6 +27,6 @@ void main() {
   final String nome = "Marco Aurélio";
   print(nome);
 
-  double preco = 3999.000;
+  final double preco = 3999.000;
   print("Preço: ${preco.toStringAsFixed(1)}");
 }

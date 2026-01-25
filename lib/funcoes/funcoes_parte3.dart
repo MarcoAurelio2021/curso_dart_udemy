@@ -5,17 +5,21 @@ void main() {
   // Função em outro pacote que está em escopo global;
   print(funcaoNomeada(nome: "Marco Aurélio", idade: 28, peso: 88));
 
-  final helloWord = () {
+  void helloWord() {
     print("Hellow-Word");
-  };
+  }
 
   helloWord();
 
-  int soma(int x, int y) {
+  int soma(final int x, final int y) {
     return x + y;
   }
 
-  int calcular(int a, int b, int Function(int, int) operacao) {
+  int calcular(
+    final int a,
+    final int b,
+    final int Function(int, int) operacao,
+  ) {
     return operacao(a, b);
   }
 

@@ -29,4 +29,6 @@ void main() {
 
   final double preco = 3999.000;
   print("Preço: ${preco.toStringAsFixed(1)}");
+
+  print(maxTentativa.bitLength);
 }

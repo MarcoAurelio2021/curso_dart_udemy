@@ -31,4 +31,5 @@ void main() {
   print("Preço: ${preco.toStringAsFixed(1)}");
 
   print(maxTentativa.bitLength);
+  print(PI);
 }

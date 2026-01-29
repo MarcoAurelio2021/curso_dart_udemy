@@ -1,5 +1,3 @@
-import 'dart:async';
-
 List<int> numeros = [9, 12, 22, 56, 90];
 
 List<int> parImpar = [1, 2, 3, 4, 5, 6, 7];
@@ -15,8 +13,8 @@ void main() {
   print(numeros.length);
 
   int total = 0;
-  for (var i = 0; i < numeros.length; i++) {
-    total += numeros[i];
+  for (final n in numeros) {
+    total += n;
   }
 
   print(total);
@@ -34,22 +32,22 @@ void main() {
 
   nomes.remove("Pedro");
 
-  for (final nomes in nomes) {
-    print(nomes);
+  for (final nome in nomes) {
+    print(nome);
   }
 
   if (nomes.contains("Marco")) {
     print("Nome encontrado!");
   } else {
     nomes.add("Marco");
-    for (final nomes in nomes) {
-      print(nomes);
+    for (final nome in nomes) {
+      print(nome);
     }
   }
 
-  int maior = 0;
+  int maior = numeros[0];
 
-  for (var i = 0; i < numeros.length; i++) {
+  for (var i = 1; i < numeros.length; i++) {
     if (numeros[i] > maior) {
       maior = numeros[i];
     }

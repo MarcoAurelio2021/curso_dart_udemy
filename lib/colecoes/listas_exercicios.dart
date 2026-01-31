@@ -7,6 +7,10 @@ List<int> impares = [];
 
 List<String> nomes = ["João", "Pedro", "Lucas"];
 
+List<int> num = [2, 4, 6];
+
+List<int> num2 = [10, 15, 20, 25, 30];
+
 void main() {
   print(numeros[0]);
   print(numeros[numeros.length - 1]);
@@ -54,4 +58,19 @@ void main() {
   }
 
   print("O Maior Numero da lista é: $maior");
+
+  final maiorQue3 = numeros.where((final n) => n > 3).toList();
+
+  print(" Lista maior que três: $maiorQue3");
+
+  final numString = num.map((n) => "Valor: $n").toList();
+
+  print(numString);
+
+  final listaFiltrada = num2
+      .where((i) => i % 2 == 0)
+      .map((i) => i * 10)
+      .toList();
+
+  print(listaFiltrada);
 }

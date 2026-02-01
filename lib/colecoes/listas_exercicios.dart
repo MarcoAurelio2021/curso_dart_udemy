@@ -11,6 +11,14 @@ List<int> num = [2, 4, 6];
 
 List<int> num2 = [10, 15, 20, 25, 30];
 
+/*
+
+🧠 Frase pra nunca esquecer
+
+where e map preparam o caminho.
+toList() faz a caminhada.
+
+ */
 void main() {
   print(numeros[0]);
   print(numeros[numeros.length - 1]);
@@ -63,14 +71,25 @@ void main() {
 
   print(" Lista maior que três: $maiorQue3");
 
-  final numString = num.map((n) => "Valor: $n").toList();
+  final numString = num.map((final n) => "Valor: $n").toList();
 
   print(numString);
 
   final listaFiltrada = num2
-      .where((i) => i % 2 == 0)
-      .map((i) => i * 10)
+      .where((final i) => i % 2 == 0)
+      .map((final i) => i * 10)
       .toList();
 
   print(listaFiltrada);
+
+  final nums = [1, 2, 2, 3, 4, 4, 5];
+
+  final numsFiltrados = nums
+      .where((final i) => i % 2 == 0)
+      .toSet()
+      .map((final i) => "Par: $i")
+      .toList();
+  print(numsFiltrados);
+
+  print("NumsFiltrados indice 0: ${numsFiltrados[0]}");
 }

@@ -1,3 +1,5 @@
+import 'classe_sem_estado.dart';
+
 class Carro {
   String modelo;
   int ano;
@@ -26,6 +28,8 @@ void main() {
   final Usuario user = Usuario();
 
   print("Usuário: ${user.nome}, Ativo: ${user.ativo}");
+
+  print(Calculadora.somar(10, 15));
 }
 
 /*

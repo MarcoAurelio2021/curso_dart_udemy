@@ -8,12 +8,12 @@ class Produto {
   }
 
   set preco(final double preco) {
-    return _preco <= 0 ? print("Preço inválido") : _preco += preco;
+    return preco <= 0 ? print("Preço inválido") : _preco += preco;
   }
 }
 
 void main() {
-  final p1 = Produto(150);
-  p1.preco = 20;
+  final p1 = Produto(0);
+  p1.preco = 120;
   print(p1.precoComDesconto);
 }

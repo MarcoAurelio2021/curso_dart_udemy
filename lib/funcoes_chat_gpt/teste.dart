@@ -18,6 +18,20 @@ int Function(int) criarSomador(final int x) {
   };
 }
 
+int Function(int) criarSubtrator(final int valorFixo) {
+  return (final int valor) {
+    return valor - valorFixo;
+  };
+}
+
+int Function() criarContador() {
+  int numero = 0;
+  return () {
+    numero++;
+    return numero;
+  };
+}
+
 void main() {
   executar(() {
     print("Olá, Marco Aurélio");
@@ -27,4 +41,15 @@ void main() {
 
   final somar10 = criarSomador(10);
   print(somar10(5));
+
+  final int Function(int) subtrair3 = criarSubtrator(3);
+  print(subtrair3(10));
+  print(subtrair3(5));
+
+  final contador = criarContador();
+  print(contador());
+  print(contador());
+  print(contador());
+  print(contador());
+  print(contador());
 }

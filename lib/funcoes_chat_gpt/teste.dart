@@ -32,6 +32,12 @@ int Function() criarContador() {
   };
 }
 
+double Function(double) criarCalcularJuros(final double taxa) {
+  return (final double valor) {
+    return valor + (valor * taxa);
+  };
+}
+
 void main() {
   executar(() {
     print("Olá, Marco Aurélio");
@@ -50,6 +56,9 @@ void main() {
   print(contador());
   print(contador());
   print(contador());
-  print(contador());
-  print(contador());
+
+  final juros10 = criarCalcularJuros(0.1);
+
+  print(juros10(100));
+  print(juros10(200));
 }

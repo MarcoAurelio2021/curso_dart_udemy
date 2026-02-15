@@ -24,17 +24,17 @@ int Function(int) criarSubtrator(final int valorFixo) {
   };
 }
 
-int Function() criarContador() {
-  int numero = 0;
-  return () {
-    numero++;
-    return numero;
-  };
-}
-
 double Function(double) criarCalcularJuros(final double taxa) {
   return (final double valor) {
     return valor + (valor * taxa);
+  };
+}
+
+int Function() criarGeradorDeMultiplo(final int numero) {
+  int num = 0;
+  return () {
+    num++;
+    return numero * num;
   };
 }
 
@@ -52,13 +52,14 @@ void main() {
   print(subtrair3(10));
   print(subtrair3(5));
 
-  final contador = criarContador();
-  print(contador());
-  print(contador());
-  print(contador());
-
   final juros10 = criarCalcularJuros(0.1);
 
   print(juros10(100));
   print(juros10(200));
+
+  final mult = criarGeradorDeMultiplo(5);
+  print(mult());
+  print(mult());
+  print(mult());
+  print(mult());
 }

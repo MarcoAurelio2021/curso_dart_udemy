@@ -13,7 +13,7 @@ Operações de conjunto como união, interseção e diferença.
  */
 
 void main() {
-  final Set<String> nomes = {"Marco", "Mariana", "Marco"};
+  final Set<String> nomes = {"Marco", "Mariana"};
 
   print(nomes); // {"Marco", "Mariana"} -> duplicado removido
   print(nomes.contains("Mariana")); // true

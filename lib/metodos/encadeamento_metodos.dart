@@ -28,8 +28,24 @@ Cada ponto (.) significa:
  */
 
 void main() {
-  final String texto = "   Flutter   ";
+  String texto = "   Flutter   ";
+  String texto2 = texto;
   print(texto.trim().toUpperCase().length);
+
+  texto = "A";
+
+  print(texto2);
+  print(texto);
+
+  final List<int> num = [1, 2];
+  final List<int> num2 = num;
+
+  print(num);
+  print(num2);
+
+  num.add(3);
+
+  print(num2);
 
   /*
   

@@ -1,7 +1,13 @@
-enum StatusPedido { pendente, processando, enviado, entegue }
+enum StatusPedido { pendente, processando, enviado, entregue }
 
 void main() {
-  StatusPedido pedido = StatusPedido.pendente;
+  final StatusPedido pedido = StatusPedido.entregue;
 
-  print(pedido);
+  print(pedido.name);
+
+  if (pedido == StatusPedido.entregue) {
+    print("Pedido finalizado");
+  } else {
+    print("Pedido ainda não chegou");
+  }
 }

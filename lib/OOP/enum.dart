@@ -39,4 +39,9 @@ void main() {
   final String status = pedido.descricao();
 
   print(status);
+
+  final NivelAcesso acessoPessoa = NivelAcesso.admin;
+
+  print(acessoPessoa.name);
+  print(acessoPessoa.mensagem);
 }

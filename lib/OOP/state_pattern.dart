@@ -24,16 +24,16 @@ class Enviado extends EstadoPedido {
 }
 
 class Pedido {
-  EstadoPedido pedido;
+  EstadoPedido estado;
 
-  Pedido(this.pedido);
+  Pedido(this.estado);
 
   String verStatus() {
-    return pedido.acao();
+    return estado.acao();
   }
 
   void mudarEstado(final EstadoPedido novoEstado) {
-    pedido = novoEstado;
+    estado = novoEstado;
   }
 }
 

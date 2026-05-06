@@ -1,9 +1,14 @@
-Future<void> esperar() async {
-  await Future.delayed(Duration(seconds: 10));
-  print("Executou");
+Future<String> buscarNome() {
+  print("Dentro da função");
+
+  return Future.delayed(Duration(seconds: 2), () {
+    print("Terminou o delay");
+    return "Marco";
+  });
 }
 
 void main() async {
-  await esperar();
+  print("Inicio");
+  buscarNome();
   print("Fim");
 }

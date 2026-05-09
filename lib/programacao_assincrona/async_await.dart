@@ -9,6 +9,8 @@ Future<String> buscarNome() {
 
 void main() async {
   print("Inicio");
-  buscarNome();
+  final Future<String> nome = buscarNome();
+  await nome;
+  // print(nomeRetornado);
   print("Fim");
 }

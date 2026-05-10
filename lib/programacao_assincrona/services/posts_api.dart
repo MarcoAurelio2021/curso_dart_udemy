@@ -21,6 +21,11 @@ class Post {
       body: json["body"] as String,
     );
   }
+
+  @override
+  String toString() {
+    return "Id: $id \n Title: $title";
+  }
 }
 
 void main() async {

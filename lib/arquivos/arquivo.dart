@@ -1,16 +1,7 @@
 import 'dart:io';
 
-Future<void> lerArquivo() async {
-  print("1");
+Future<void> main() async {
+  final arquivo = File('dados.txt');
 
-  final texto = await File("dados.txt").readAsString();
-
-  print("2");
-  print(texto);
-}
-
-void main() {
-  lerArquivo();
-
-  print("3");
+  await arquivo.writeAsString('Olá,Marco!');
 }
